@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+audio_log/*
+!audio_log/.gitkeep
+firmware/*
+!firmware/.gitkeep
+.idea
+CLAUDE.md
+config.toml
+rsync.sh

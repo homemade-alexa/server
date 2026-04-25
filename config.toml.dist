@@ -1,0 +1,39 @@
+[server]
+host = "0.0.0.0"
+port = 8080
+
+# the URL that is accessible fo the ESP32 device (used for downloading the OTA update)
+# If empty, the server will try to use the X-Forwarded-For header or the HTTP client id
+serve_url = "http://YOUR_SERVER_IP:8080"
+
+[webapp]
+base = "/"
+
+[firmware]
+# where to look for the *.bin files for OTA
+dir = "./firmware"
+
+[audio]
+# Folder for logging the received audio (optional)
+log_dir = "./audio_log"
+save_audio = false
+
+[audio_server]
+# audio playing server
+url = "http://YOUR_AUDIO_SERVER_IP:1234"
+
+# webapp authorization
+[auth]
+username = "alexa"
+# generate the password hash using: python -c "from helpers.Auth import hash_password; print(hash_password('YOUR_PASSWORD'))"
+password_hash = ""
+# random JWT secret. Generate with: python -c "import secrets; print(secrets.token_hex(32))"
+jwt_secret = ""
+jwt_expire_days = 30
+
+[openai]
+api_key = ""
+model = "gpt-4.1"
+session_timeout_seconds = 300
+
+
